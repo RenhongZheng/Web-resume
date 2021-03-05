@@ -1,0 +1,184 @@
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			h1{
+				margin-top: 20px;
+				text-align: center;
+			}
+/*背景音乐*/
+			#music{
+				width: 5%;
+				position: fixed;
+				right: 50px;
+				
+			}
+			#music img{
+				width: auto;
+			}
+			.XuanZhuan{
+				width: auto;
+				animation:yy 6s linear 0s infinite;
+				-webkit-animation: yy 6s linear 0s infinite;
+			}
+			@keyframes yy{  
+        		from{  
+            		transform:rotate(0deg);  
+        		}  
+        		to{  
+            		transform:rotate(360deg);  
+        		}  
+    		}
+    		@-webkit-keyframes yy{  
+        		from{  
+            		transform:rotate(0deg);  
+        		}  
+        		to{  
+            		transform:rotate(360deg);  
+        		}  
+    		}
+			
+/*简介*/
+			#Name{
+				width: 100%;
+				background: url(../img/bz.jpeg)no-repeat;
+				background-size: cover;
+			}
+			#Na{
+				width: 70%;
+				margin:auto;
+				text-align: center;
+			}
+			#Na img{
+				border-radius: 60%;
+				width: 11rem;
+			}
+			#Na p{
+				margin-top: 5%;
+				color: white;
+			}
+/*代表作品*/
+			/*总框架*/
+			#ZhanShi{
+				width: 100%;
+				float: left;
+			}
+			/*图片盒子*/
+			.img{
+				width: 24.99999%;
+				float: left;
+				margin: 4%;
+				border: 1px solid #CCC;
+				
+			}
+			.img:hover{
+				border: 1px solid #777;
+				transform:scale(1.5,1.5);
+				-webkit-transform: scale(1.2,1.2);
+				-webkit-transition: all 2s;
+			}
+			/*图片设置*/
+			.img img{
+				width: 100%;
+			}
+			/*文体设置*/
+			.text{
+				padding: 15px;
+    			text-align: center;
+    			background: white;
+			}
+/*短视频*/
+			#view{
+				width: 100%;
+			}
+			#view video{
+				margin: 5% 25%;
+				 width: 50%;
+			}
+/*谢幕*/
+		#XieMu{
+			width: 100%;
+			height: 50rem;
+			background: url(../img/XieMu.png) fixed;
+			background-size: cover;
+		}
+		#X_text{
+			width: 500px;
+			height: 460px;
+			margin:100px auto;
+		}
+		.right{
+			width: 156px;
+			height: 106px;
+			border-top:5px solid gold;
+			border-right:5px solid gold;
+			float: right;
+		}
+		.left{
+			width: 200px;
+			height: 200px;
+			border-bottom:5px solid gold;
+			border-left:5px solid gold;
+			float: left;
+			margin-top:260px;
+		}
+		#X_center{
+			margin-top: 40px;
+			margin-left: 30px;
+			width: 460px;
+			height: 400px;
+			position: absolute;
+			text-align: center;
+			line-height: 50px;
+		}
+		
+		
+		#X_center p{
+			font-weight: bold;
+		}
+/*当屏幕为760px*/
+		@media only screen and (max-width: 760px){
+			/*代表作品的图片盒子的宽为49.99999%*/
+    		.img {
+        			width: 49.99999%;
+        			margin: 6px 0;
+    			}
+			}
+
+/*当屏幕为520px*/
+		@media only screen and (max-width: 520px) {
+			/*谢幕*/
+			#XieMu{
+				position: relative;
+				
+			}
+			#X_text{
+				width: 100%;
+			}
+			.left{
+				position: absolute;
+				bottom: 0;
+			}
+			#X_center{
+				margin-left:0;
+				width: 100%;
+			}
+		}
+/*当屏幕为320px*/
+		@media only screen and (max-width: 320px) {
+				/*代表作品的图片盒子的宽为100%*/
+    			.img {
+        			width: 100%;
+    			}
+    			/*简介图片*/
+    			#Na img{
+    				width: 50%;
+    			}
+    			/*短视频*/
+    			#view video {
+        			width: 100%;
+        			margin: auto;
+    			}
+			
+		}			

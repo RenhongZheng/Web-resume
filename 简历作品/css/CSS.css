@@ -1,0 +1,382 @@
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			html{
+  				scroll-behavior: smooth;   /*锚点平滑效果*/
+			}
+/*第一页面：开头*/
+/*全部页面设置*/
+			#tu01,#tu02{
+				width: 100%;
+				height:720px ;
+				background: url(../img/mao.jpg) no-repeat;
+				background-size: 100% 720px;
+				z-index: -5;
+				text-align: center;
+			}
+/*菜单隐藏和开启*/
+			#top{
+				width: 50px;
+				height: 50px;
+				background: #CDA087;
+				padding-top: 3px;
+				position: fixed;
+				right: 0;
+				margin: 7px;
+				z-index: 2;
+				border-radius: 60%;
+				box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+			#top:hover{
+				background: #808080;
+			}
+			.hamburger .line{
+  				width: 35px;
+  				height: 5px;
+  				background-color: #ecf0f1;
+  				display: block;
+  				margin: 8px auto;
+  				transition: all 0.3s ease-in-out;
+  			}
+  			.hamburger:hover{
+  				/*会变成可点击的效果*/
+   				cursor: pointer;
+  			}
+  				/* ONE */
+  			#hamburger-1.is-active .line:nth-child(2){
+   				opacity: 0;
+  				}
+  			#hamburger-1.is-active .line:nth-child(1){
+   				-webkit-transform: translateY(13px) rotate(45deg);	/*必备的*/
+   				-ms-transform: translateY(13px) rotate(45deg);
+   				-o-transform: translateY(13px) rotate(45deg);
+  				transform: translateY(13px) rotate(45deg);
+  				}
+  			#hamburger-1.is-active .line:nth-child(3){
+    			-webkit-transform: translateY(-13px) rotate(-45deg);
+    			-ms-transform: translateY(-13px) rotate(-45deg);
+   				-o-transform: translateY(-13px) rotate(-45deg);
+   				transform: translateY(-13px) rotate(-45deg);
+	  		}
+	  		
+/*菜单栏*/
+	/*开启后*/		
+			#center_left{
+    				display: block;
+    				width: 180px;
+    				position: fixed;
+    				right: 0;
+    				bottom:0;top:0;  /*可以自适应边框*/
+    				border:1px solid #ccc;
+    				border-width: 0 1px 0 0;
+    				display:none;
+    				overflow: hidden;
+    				z-index: 1;
+			}
+			#center_left:after{
+				content:"";
+				position: absolute;
+				background:url(../img/dog2.jpeg) #CEC9C5 no-repeat;
+				background-size:100% ;
+				-webkit-filter: blur(3px);
+				-moz-filter:blur(20px);
+				-ms-filter:blur(20px);
+				-o-filter:blur(20px);
+				/*以下4个必须，不然其他属性无法生效*/
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				/*模糊处理*/
+				filter: blur(3px);
+				z-index: -1;
+			}
+	/*头像*/
+			#center_left img{
+				margin:20%;
+				border-radius: 50%;
+				height: 100px;
+				margin-top:100px ;
+				margin-bottom: 10px;
+
+			}
+	/*名字*/
+			#center_left h3{
+				/*margin-left: 40px;*/
+				margin-bottom: 50px;
+			}
+	/*导航条*/
+			#left_ul{
+				display: block;
+			}
+	/*按钮设置*/
+			#left_ul li,a{
+				margin-bottom: 10px;
+				display: block;
+				list-style: none; /*去掉序列号*/
+				text-decoration: none;
+				width: 100%;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				color:#00A0BE;
+				font-weight: 900;
+			}
+	/*按钮变化*/
+			#left_ul a:hover{
+				background: #C9B3A8;
+				text-shadow: 5px 5px 4px #66676A;
+				transition: all 0.5s;
+				transform: rotateY(30deg);
+			}
+	/*抛锚特效*/
+			.a{
+				text-shadow: 5px 5px 4px #66676A;
+			}
+			
+/*主题，开头介绍*/
+			#right{
+				padding-top: 150px;
+			}
+			#right_01{
+				margin:0 auto;
+				width: 700px;
+				height: 300px;
+				position: relative;
+				text-align: center;
+				transition: all 1s;
+			}
+			#right_01:hover{
+				background: rgba(255,255,255,0.6);
+				box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.2), 0 -20px 10px 0 rgba(0, 0, 0, 0.19),-20px 0px 10px 0 rgba(0, 0, 0, 0.19),20px 0px 10px 0 rgba(0, 0, 0, 0.19);
+				transition: all 1s;
+			}
+			#right_01 h1{
+				padding-top: 30px;
+				font-size:57px;
+			}
+			#right_01 p{
+				margin-top: 20px;
+			}
+			
+/*第二页面：简单的自我介绍*/
+#tu02_center{
+	margin: auto;
+	padding-top:50px;
+	width:80%;
+}
+hr{
+	width:150px;
+	float: center;
+	background-color: #E87E04;
+	height: 2px;
+	margin: auto;
+}
+#tu02_center img{
+	border-radius:60% ;
+	margin-top:80px ;
+	margin-bottom: 30px;
+}
+#tu02_center p{
+	margin-top: 30px;
+	font-weight: 900;
+}
+/*第三页面：我的作品*/
+#tu03{
+	width: 100%;
+	height: 720px;
+	background: url(../img/banner.jpg) no-repeat fixed;
+	background-size:cover ;
+	z-index: -5;
+	text-align: center;
+}
+#tu03_ZhuoPin{
+	margin-top:15px;
+}
+#ZP1 a{
+	height: 100%;
+}
+#ZP1{
+	width: 19%;
+	float:left;
+	margin: 6%;
+	background: white;
+	border: 1px solid #CCC;
+}
+#ZP1>a>img{
+	width: 100%;
+	margin-bottom: 0;
+}
+#ZP1:hover{
+border: 1px solid #777;
+transform:scale(1.5,1.5);
+-webkit-transform: scale(1.5,1.5);
+-webkit-transition: all 2s;
+}
+/*第四页面：技能*/
+#tu04{
+	width: 100%;
+	height: 720px;
+	background-size:cover;
+}
+.item-main{
+    width: 100%;
+    height:auto;
+    display: flex;
+    margin-top: 50px;
+    padding: 50px;
+}
+.item-two{
+        width: 100%;
+        height:2em;
+        line-height: .5rem;
+        display: flex;
+        margin: 0 auto;
+}
+    .item-txt{
+        width: 30%;
+        text-align: center;
+        font-size: 1rem;
+        font-family: '微软雅黑 Light';
+       	margin-top: 10px;
+    }
+
+    .item-line{
+        width: 60%;
+        height:15p;
+        border-top-left-radius:0.08rem 0.08rem;
+        border-top-right-radius:0.08rem 0.08rem;
+        border-bottom-left-radius:0.08rem 0.08rem;
+        border-bottom-right-radius:0.08rem 0.08rem;
+        line-height: 0.16rem;
+        margin-top: 0.17rem;
+        font-size: 0.12rem;
+        position: relative;
+    }
+    .item-line span{
+        display: block;
+        position: absolute;
+        left:0;
+        top:0;
+        height:100%;
+    }
+    .item-line span:nth-of-type(2){
+        color: white;
+    }
+/*第五页面：教育经历*/
+#tu05{
+	width: 100%;
+	height: 720px;
+	background: url(../img/banner.jpg) no-repeat fixed;
+	background-size:cover;
+}
+	#tu05_center{
+		width: 70%;
+		height: 474px;
+		margin:50px auto;
+		color: white;
+	}
+	#JinLi_left{
+		width: 200px;
+		height: 473px;
+		float: left;
+	}
+	#JinLi_left_01{
+		width: 200px;
+		height: 93px;
+	}
+	#Yuan{
+		width: 93px;
+		height: 93px;
+		border-radius:60%;
+		border:6px solid white;
+		float: right;
+		padding: 5px;
+		padding-top:20px ;
+	}
+	#Yuan span{
+		font-size: 36px;
+		font-weight: 900;
+	}
+	#JinLi_left_02{
+		width: 155px;
+		height: 380px;
+		border-right:6px solid white;
+	}
+	#JinLi_left_02 li{
+		width: 150px;
+		height: 100px;
+		line-height: 100px;
+		list-style: none;
+		text-align: center;
+	}
+	.JinLi_left_02_li01{
+		margin-top:3px ;
+	}
+	.Hen{
+		width: 25px;
+		height: 2px;
+		float: right;
+		margin-top: 49px;
+		background: #90ED7D;
+	}
+	.Dian{
+		border: 2px solid #90ED7D;
+		height: 16px;
+		width: 16px;
+		border-radius: 60%;
+		background: white;
+		display: block;
+		position: relative;
+		top: -58px;
+		left:145px;
+	}
+	.DianF{
+		border: 4px solid #90ED7D;
+		transform:scale(1.5,1.5);
+		-webkit-transform: scale(1.5,1.5);
+	}
+	.JinLi_left_02_li02{
+		margin-top: 25px;
+	}
+	#JinLi_right{
+		width: 52%;
+		height: 300px;
+		float: left;
+		position: relative;
+		top: 60px;
+	}
+	#JinLi_right li{
+		list-style: none;
+		margin-top:35px ;
+	}
+/*2018旋转特效*/
+	#none{
+		width: 94px;
+		height: 94px;
+		border-radius:60%;
+		border:6px solid white;
+		position: relative;
+		top: -69px;
+		left: -11px;
+		background: url(../img/YuanTuBiao.png) #90ED7D;
+		background-size:cover ;
+		opacity: 0;
+ 		transition: all 1s;
+    	-webkit-transition: all 1s;
+		transform: rotate(40deg);
+		-ms-transform: rotate(40deg);
+		-webkit-transform: rotate(40deg);
+	}
+	#none:hover{
+		border:6px solid #57956A;
+		transition: all 1s;
+    	-webkit-transition: all 1s;
+		transform: rotate(400deg);
+		-ms-transform: rotate(400deg);
+		-webkit-transform: rotate(400deg);
+		opacity: 1;
+	}
