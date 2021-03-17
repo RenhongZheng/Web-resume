@@ -2,7 +2,7 @@
 
 ## Web简历（PC）项目描述：
 
-实现技术：CSS+HTML+H5+CSS3+Jqury
+实现技术：CSS+HTML+H5+CSS3+jQuery
 
 1.共有5个div组成5个页面
 
@@ -17,7 +17,7 @@
 
 ## 音乐达人介绍页面（PC和H5）项目描述：
 
-实现技术：CSS+HTML+H5+CSS3+Jqury
+实现技术：CSS+HTML+H5+CSS3+jQuery
 
 1.采用的是响应式布局，可以PC端和手机端显示。
 
